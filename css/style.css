@@ -1,0 +1,876 @@
+/* Base Styles */
+* {
+    margin: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #F3EEE7;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: #333333; /* Change to your desired color */
+}
+
+/* Navigation */
+nav {
+    max-width: 3000px;
+    height: 150px;
+    background-color:#171719ef;
+    position: relative;
+    z-index: 3;
+}
+
+.NavList {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: center;
+    margin: 0 auto;
+    align-items: center;
+    position: absolute;
+    left: 70%;
+    top: 53%;
+    transform: translate(-50%,-50%);
+}
+
+
+.MobileNav .NavList {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    vertical-align: center;
+    margin: 0 auto;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.NavList li {
+    list-style: none;
+}
+.NavList li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    vertical-align: center;
+    list-style: none;
+    color: #E3D8CC;
+    transition: .5s;
+}
+
+.menuIcon {
+    color: #E3D8CC;
+    font-size: 100px;
+    position: relative;
+    margin: 0 auto;
+    visibility: hidden;
+    align-items: center;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.HoverBorder {
+    background-color: transparent;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    transition: .5s;
+}
+nav ul li:hover .HoverBorder{
+    background-color: #C5A15B;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    vertical-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.MobileNav {
+    height: 100vh;
+    width: 250px;
+    background-color: #171719ef;
+    position: fixed;
+    z-index: 5;
+    transform: translateX(280%);
+    display: none;
+    transition: 1s;
+}
+
+.MobileNav.open
+{
+    height: 1000px;
+    width: 250px;
+    background-color: #171719ef;
+    position: fixed;
+    z-index: 5;
+    transform: translateX(180%);
+    transition: 1s;
+   
+}
+
+.MobileNav .NavList {
+    position: absolute;
+    top: 20%;
+    
+}
+.MobileNav .NavList li {
+    margin-top: 25px;
+}
+
+
+/* Hero Section */
+.Hero {
+    position: relative;
+    height: 100vh;
+}
+.BackGroundImage {
+    position: absolute;
+    background-image: url(../Images/Salon1.jpg);
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    top: 0%;
+    z-index: 1;
+    border-bottom: 5px solid black;
+}
+
+.Overlay {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+    height: 100vh;
+    display: flex;
+}
+.Heading {
+    color: white;
+    font-size: 190px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+}
+
+.HomeInfo {
+    color: white;
+    font-size: 35px;
+    font-weight: lighter;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 3px;
+    height: 400px;
+    width: 800px;
+}
+.HeroText {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    right: 20%;
+}
+
+.HeroText h1 {
+left: 48.5%;
+position: relative;
+}
+.HeroText p {
+    top: 30%;
+    left: 50%;
+}
+Button {
+    color: #8C4F4D;
+    border: none;
+    border-radius: 4px;
+    background-color: #8C4F4D;
+    width: 200px;
+    height: 75px;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.LearnMoreButton {
+    position: relative;
+    top: 10%;
+}
+
+
+.LearnMoreButton a {
+     color: white;
+}
+
+
+/* Services Section */
+.ServiceSection {
+    position: relative;
+}
+
+.Services {
+    width: 100%;
+    background-color: #F3EEE7;
+    min-height: 1000px;
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-sizing: border-box;
+
+}
+.Service {
+    background-color: #F3E8DC;
+    border: solid 2px #171719;
+    border-radius: 10px;
+
+    width: 32%;
+    min-height: 700px;
+
+    position: relative;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Service h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(50px, 5vw, 90px);
+    font-weight: 250;
+
+    margin: 20px 0 40px;
+
+    text-align: center;
+}
+
+
+.Service h1::before {
+    content: " ";
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: 11.5%;
+    transform: translate(-70px);
+    width: 25px;
+    border-radius: 100%;
+}
+
+.Service h1::after {
+    content: " ";
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: 11.5%;
+    transform: translate(70px);
+    width: 25px;
+    border-radius: 100%;
+}
+
+
+.Service p {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(18px, 1.5vw, 24px);
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    width: 100%;
+    max-width: 400px;
+
+    margin: 0 0 30px;
+
+    text-align: center;
+}
+
+.Service .FutureImg {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+
+    background-color: #171719;
+    border-radius: 20px;
+
+    margin-bottom: 35px;
+}
+.Service button {
+    margin-top: auto;
+    padding: 14px 24px;
+    background-color: #8C4F4D;
+    color: #F3EEE7;
+    border: none;
+    border-radius: 3px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+}
+.Service button:hover {
+    background-color: #785F52;
+}
+
+
+
+
+/* Our Work Section */
+
+.OurWorkSection {
+    position: relative;
+    max-width: 3000px;
+    height: 70vh;
+}
+
+.Embeds {
+    width: 100%;
+    background-color: #F3EEE7;
+    min-height: 800px;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.Embeds div {
+     background-color: #F3E8DC;
+    border: solid 2px #171719;
+    border-radius: 10px;
+    width: 50%;
+    min-height: 700px;
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Check {
+    font-size: 100px;
+}
+
+
+/* About Sheena Section */
+
+
+
+
+.AboutSheena {
+ position: relative;
+    max-width: 3000px;
+    height: 650px;
+    background-color: #171719;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Sheena {
+width: 25%;
+height: 500px;
+border-radius: 100%;
+position: relative;
+}
+
+.SheenaText {
+    position: relative;
+    width: 1000px;
+    color: #F3E8DC;
+}
+
+
+.AboutStudio {
+    position: absolute;
+    font-size: 100px;
+    color: #F3E8DC;
+    margin: 0 auto;
+}
+
+.Reviews {
+     position: relative;
+    max-width: 3000px;
+    height: 80vh;
+    background-color: #f3eee7;
+    padding: 25px;
+}
+
+.Reviews h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+}
+.Reviews h2 {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.ReviewBG {
+    width: 1450px;
+    height: 900px;
+    position: relative;
+}
+.HairCutReview {
+    height: 800px;
+    width: 600px;
+    border: solid 2px black;
+    border-radius: 10px;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.BlackLine {
+    height: 100%;
+    position: absolute;
+    background-color: #171719;
+    width: 5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.ReviewText {
+    font-size: 40px;
+    height: 800px;
+    width: 600px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.ReviewPFP {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 80%;
+    left: 72%;
+    border-radius: 100%;
+}
+
+.ReviewName {
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 84.5%;
+    left: 80%;
+    font-size: 30px;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    background: #242222;
+    color: #f3e9df;
+    padding: 60px 5% 25px;
+    margin-top: 100px;
+}
+
+/* Three-column layout */
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual columns */
+
+.footer-column {
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-column p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Quick links */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    color: #f3e9df;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #c98b85;
+}
+
+/* Bottom copyright */
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(243, 233, 223, 0.2);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding: 45px 6% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+    }
+
+}
+
+
+/* Font Utilities */
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 250;
+  font-style: normal;
+}
+.league-spartan {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1450px;
+  position: relative;
+  margin: auto;
+  height: 900px;
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: #f3e8dc;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #8C4F4D;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+    background: #c4b6ab;
+}
+.dots {
+    position: relative;
+    top: -7%;
+    width: 100px;
+    left: 14.9%;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+
+    .HeroText {
+    position: relative;
+    left: 70%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+
+    nav ul {
+        visibility: hidden;
+    }
+
+
+
+    .menuIcon {
+    color: #E3D8CC;
+    font-size: 100px;
+    position: relative;
+    visibility: visible;
+}
+
+
+.MobileNav {
+    display: block;
+}
+
+    .Services {
+        flex-direction: column;
+        align-items: center;
+
+        padding: 60px 20px;
+
+        min-height: auto;
+        gap: 30px;
+
+        margin-top: 0;
+    }
+
+    .Service {
+        width: 100%;
+        max-width: 500px;
+        min-height: 600px;
+
+        padding: 30px 25px;
+    }
+
+    .Service h1 {
+        font-size: 60px;
+    }
+
+    .Service p {
+        font-size: 19px;
+    }
+
+    .Service .FutureImg {
+        max-width: 280px;
+    }
+
+
+    .AboutSheena {
+        height: 950px;
+    }
+.AboutStudio {
+
+    font-size: 50px;
+}
+.SheenaText {
+    position: absolute;
+    top: 45%;
+    font-size: 30px;
+    width: 550px;
+}
+
+.Sheena {
+    position: absolute;
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    top: 10%;
+}
+
+.Reviews h1 {
+    width: 450px;
+    font-size: 50px;
+}
+.Reviews h2 {
+    width: 450px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ReviewBG {
+    width: 520px;
+    height: 900px;
+}
+
+.BlackLine {
+    display: none;
+}
+
+.HairCutReview {
+    width: 400px;
+    height: 400px;
+    top: 25%;
+    left: 50%;
+    
+}
+
+.ReviewText {
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 75%;
+    font-size: 25px;
+}
+
+.ReviewPFP {
+    width: 75px;
+    height: 75px;
+    top: 89%;
+    left: 10%;
+
+}
+
+.ReviewName {
+    width: 250px;
+    height: 100px;
+    top: 92%;
+    left: 20%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.dots {
+    top: -9.6%;
+    left: 30%;
+}
+
+.Reviews {
+    height: 90vh;
+}
+
+
+    
+.Service h1::before {
+    content: " ";
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    transform: translate(-30px);
+    width: 25px;
+    border-radius: 100%;
+}
+
+.Service h1::after {
+    content: " ";
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    transform: translate(30px);
+    width: 25px;
+    border-radius: 100%;
+}
+
+
+}
+
+/* Phone Styles */
+@media (max-width: 600px) {
+.Services {
+    display: flex;
+    flex-direction: column;
+}
+
+}
